@@ -127,6 +127,16 @@ class MrpcProcessor(DataProcessor):
 > 仿照上述代码的要求，设计自己的训练任务，如下：
 
 ```python
+processors = {
+      "np": NpProcessor,
+      "cola": ColaProcessor,
+      "mnli": MnliProcessor,
+      "mrpc": MrpcProcessor,
+      "xnli": XnliProcessor,
+  }
+```
+
+```python
 class NpProcessor(DataProcessor):
   """Processor for the MRPC data set (GLUE version)."""
 
