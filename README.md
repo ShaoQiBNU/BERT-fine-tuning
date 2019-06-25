@@ -209,14 +209,15 @@ elif [[ "$1" == "test" ]];then
         --bert_config_file ./chinese_L-12_H-768_A-12/bert_config.json \
         --init_checkpoint ./gpu_result \
         --vocab_file ./chinese_L-12_H-768_A-12/vocab.txt \
+        --predict_batch_size 64 \
         --max_seq_length 16 \
         --output_dir ./gpu_result/
 fi
 ```
 
-- fine-tuning训练时，将do_train和do_eval设置为True，do_test设置为False(默认)；
+- fine-tuning训练时，将do_train和do_eval设置为True，do_predict设置为False(默认)；
 
-- 当模型训练好了，就可以将do_test设置为True，将会自动调用保存在output_dir中已经训练好的模型，进行测试；init_checkpoint也可以明确设置，例如：--init_checkpoint ./gpu_result/model.ckpt-56000 \
+- 当模型训练好了，就可以将do_predict设置为True，将会自动调用保存在output_dir中已经训练好的模型，进行测试；init_checkpoint也可以明确设置，例如：--init_checkpoint ./gpu_result/model.ckpt-56000 \；当测试数据较大时，可以考虑设置predict_batch_size预测。
 
 - max_seq_length、train_batch_size、learning_rate、num_train_epochs 可以根据自己的设备情况适当调整；
 
