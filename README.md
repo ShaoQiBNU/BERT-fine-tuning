@@ -230,3 +230,19 @@ sh run_gpu.sh train
 # test
 sh run_gpu.sh test
 ```
+
+# 四. bert做NER
+
+## bert fine-tuning ner
+
+https://github.com/ProHiryu/bert-chinese-ner
+
+https://github.com/kyzhouhzau/BERT-NER
+
+https://github.com/kamalkraj/BERT-NER
+
+## bert+biLstm+crf ner
+
+https://blog.csdn.net/luoyexuge/article/details/84728649
+
+https://github.com/macanv/BERT-BiLSTM-CRF-NER
